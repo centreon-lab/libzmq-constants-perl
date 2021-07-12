@@ -1,0 +1,21 @@
+Source: libzmq-constants-perl
+Maintainer: Luiz Costa <me@luizgustavo.pro.br>
+Section: perl
+Priority: optional
+Build-Depends: 
+    debhelper-compat (= 13),
+    libperl-dev,
+    libmodule-install-perl
+Build-Depends-Indep: perl
+Standards-Version: 4.5.1
+Homepage: https://metacpan.org/release/ZMQ-Constants
+Rules-Requires-Root: no
+
+Package: libzmq-constants-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Description: Constants for libzmq
+ (no description was found)
+ .
+ This description was automagically extracted from the module by dh-make-perl.

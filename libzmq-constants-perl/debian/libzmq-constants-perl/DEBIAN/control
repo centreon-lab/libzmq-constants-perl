@@ -1,0 +1,13 @@
+Package: libzmq-constants-perl
+Version: 1.04-1
+Architecture: all
+Maintainer: Luiz Costa <me@luizgustavo.pro.br>
+Installed-Size: 34
+Depends: perl:any
+Section: perl
+Priority: optional
+Homepage: https://metacpan.org/release/ZMQ-Constants
+Description: Constants for libzmq
+ (no description was found)
+ .
+ This description was automagically extracted from the module by dh-make-perl.

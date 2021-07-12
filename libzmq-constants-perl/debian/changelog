@@ -1,0 +1,5 @@
+libzmq-constants-perl (1.04-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- root <root@>  Fri, 9 Jul 2021 11:43:09 +0000
