@@ -1,0 +1,34 @@
+Format: 1.8
+Date: Fri, 9 Jul 2021 11:43:09 +0000
+Source: libzmq-constants-perl
+Binary: libzmq-constants-perl
+Architecture: source all
+Version: 1.04-1
+Distribution: unstable
+Urgency: low
+Maintainer: Luiz Costa <me@luizgustavo.pro.br>
+Changed-By: root <root@>
+Description:
+ libzmq-constants-perl - Constants for libzmq
+Changes:
+ libzmq-constants-perl (1.04-1) unstable; urgency=low
+ .
+   * Initial release.
+Checksums-Sha1:
+ 65f650e1fa41d7e35ab28916f4a0c64370305e1e 1009 libzmq-constants-perl_1.04-1.dsc
+ cd9047e2103249c0e5236ddd7b26dc83f27f1d50 23382 libzmq-constants-perl_1.04.orig.tar.gz
+ a17e9962a89b631f518865a32e0d1706123a849c 1584 libzmq-constants-perl_1.04-1.debian.tar.xz
+ 1a22ccd9351a24f2f21c0b844e6a1d8fa45c0f24 8984 libzmq-constants-perl_1.04-1_all.deb
+ 2927c1bb79aa9774f85d1e664d43cd7958ed163d 4888 libzmq-constants-perl_1.04-1_amd64.buildinfo
+Checksums-Sha256:
+ 3a82e22df59f04c572a0829c059aef00a8969c209666b95ae4287890a3be1b76 1009 libzmq-constants-perl_1.04-1.dsc
+ bec3d17d924b8a3fc90505d22ab8154006acc3bac7ad66372470e715165f4b93 23382 libzmq-constants-perl_1.04.orig.tar.gz
+ 95981670820035c871acd093168ae789b9280f1c9851eeefcb5014c5de6ef7df 1584 libzmq-constants-perl_1.04-1.debian.tar.xz
+ 69cdb16d86926376730672f1ea88cccfda725908cf4a3706e10f90e8dd6be656 8984 libzmq-constants-perl_1.04-1_all.deb
+ 5af52f743a96a9a9a487a2322f2244d711446129fa82a4ef1830d4d68c26b461 4888 libzmq-constants-perl_1.04-1_amd64.buildinfo
+Files:
+ a7b0e7f498e5ddd33dc3ae99c9d2ad31 1009 perl optional libzmq-constants-perl_1.04-1.dsc
+ 993961a924f88de186419b590266d9c0 23382 perl optional libzmq-constants-perl_1.04.orig.tar.gz
+ f124322deed0318492e6e917ae596f63 1584 perl optional libzmq-constants-perl_1.04-1.debian.tar.xz
+ cc0f2fcc57d019e1563e23196fb884ac 8984 perl optional libzmq-constants-perl_1.04-1_all.deb
+ c2c79a6317c034282f6957609c49bb85 4888 perl optional libzmq-constants-perl_1.04-1_amd64.buildinfo

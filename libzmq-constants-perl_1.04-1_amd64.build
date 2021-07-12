@@ -1,0 +1,246 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package libzmq-constants-perl
+dpkg-buildpackage: info: source version 1.04-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by root <root@>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh clean
+   dh_auto_clean
+	make -j4 distclean
+make[1]: Entering directory '/root/lab/tmp4/libzmq-constants-perl'
+"/usr/bin/perl" "-Iinc" "-MExtUtils::Manifest=fullcheck" -e fullcheck
+rm -f \
+  Constants.bso Constants.def \
+  Constants.exp Constants.x \
+   blib/arch/auto/ZMQ/Constants/extralibs.all \
+  blib/arch/auto/ZMQ/Constants/extralibs.ld Makefile.aperl \
+  *.a *.o \
+  *perl.core MYMETA.json \
+  MYMETA.yml blibdirs.ts \
+  core core.*perl.*.? \
+  core.[0-9] core.[0-9][0-9] \
+  core.[0-9][0-9][0-9] core.[0-9][0-9][0-9][0-9] \
+  core.[0-9][0-9][0-9][0-9][0-9] libConstants.def \
+  mon.out perl \
+  perl perl.exe \
+  perlmain.c pm_to_blib \
+  pm_to_blib.ts so_locations \
+  tmon.out 
+rm -rf \
+  blib 
+mv Makefile Makefile.old > /dev/null 2>&1
+rm -f \
+  Makefile Makefile.old 
+rm -rf \
+  ZMQ-Constants-1.04 MYMETA.yml 
+Not in MANIFEST: debian/.debhelper/generated/libzmq-constants-perl/installed-by-dh_installdocs
+Not in MANIFEST: debian/.debhelper/generated/libzmq-constants-perl/installed-by-dh_installman
+Not in MANIFEST: debian/changelog
+Not in MANIFEST: debian/control
+Not in MANIFEST: debian/copyright
+Not in MANIFEST: debian/debhelper-build-stamp
+Not in MANIFEST: debian/files
+Not in MANIFEST: debian/libzmq-constants-perl.substvars
+Not in MANIFEST: debian/libzmq-constants-perl/DEBIAN/control
+Not in MANIFEST: debian/libzmq-constants-perl/DEBIAN/md5sums
+Not in MANIFEST: debian/libzmq-constants-perl/usr/share/doc/libzmq-constants-perl/changelog.Debian.gz
+Not in MANIFEST: debian/libzmq-constants-perl/usr/share/doc/libzmq-constants-perl/changelog.gz
+Not in MANIFEST: debian/libzmq-constants-perl/usr/share/doc/libzmq-constants-perl/copyright
+Not in MANIFEST: debian/libzmq-constants-perl/usr/share/man/man3/ZMQ::Constants.3pm.gz
+Not in MANIFEST: debian/libzmq-constants-perl/usr/share/perl5/ZMQ/Constants.pm
+Not in MANIFEST: debian/libzmq-constants-perl/usr/share/perl5/ZMQ/Constants/V2_1_11.pm
+Not in MANIFEST: debian/libzmq-constants-perl/usr/share/perl5/ZMQ/Constants/V3_1_1.pm
+Not in MANIFEST: debian/libzmq-constants-perl/usr/share/perl5/ZMQ/Constants/V3_1_2.pm
+Not in MANIFEST: debian/libzmq-constants-perl/usr/share/perl5/ZMQ/Constants/V4_0_4.pm
+Not in MANIFEST: debian/rules
+Not in MANIFEST: debian/source/format
+Not in MANIFEST: debian/upstream/metadata
+Not in MANIFEST: debian/watch
+make[1]: Leaving directory '/root/lab/tmp4/libzmq-constants-perl'
+   dh_clean
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building libzmq-constants-perl using existing ./libzmq-constants-perl_1.04.orig.tar.gz
+dpkg-source: info: building libzmq-constants-perl in libzmq-constants-perl_1.04-1.debian.tar.xz
+dpkg-source: info: building libzmq-constants-perl in libzmq-constants-perl_1.04-1.dsc
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   dh_autoreconf
+   dh_auto_configure
+	perl Makefile.PL INSTALLDIRS=vendor "OPTIMIZE=-g -O2 -ffile-prefix-map=/root/lab/tmp4/libzmq-constants-perl=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2" "LD=x86_64-linux-gnu-gcc -g -O2 -ffile-prefix-map=/root/lab/tmp4/libzmq-constants-perl=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-z,relro"
+Cannot determine perl version info from lib/ZMQ/Constants.pm
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for ZMQ::Constants
+Writing MYMETA.yml and MYMETA.json
+   dh_auto_build
+	make -j4
+make[1]: Entering directory '/root/lab/tmp4/libzmq-constants-perl'
+cp lib/ZMQ/Constants.pm blib/lib/ZMQ/Constants.pm
+cp lib/ZMQ/Constants/V3_1_2.pm blib/lib/ZMQ/Constants/V3_1_2.pm
+cp lib/ZMQ/Constants/V3_1_1.pm blib/lib/ZMQ/Constants/V3_1_1.pm
+cp lib/ZMQ/Constants/V2_1_11.pm blib/lib/ZMQ/Constants/V2_1_11.pm
+cp lib/ZMQ/Constants/V4_0_4.pm blib/lib/ZMQ/Constants/V4_0_4.pm
+Manifying 1 pod document
+make[1]: Leaving directory '/root/lab/tmp4/libzmq-constants-perl'
+   dh_auto_test
+	make -j4 test TEST_VERBOSE=1
+make[1]: Entering directory '/root/lab/tmp4/libzmq-constants-perl'
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(1, 'inc', 'blib/lib', 'blib/arch')" t/*.t
+t/000_basic.t .... 
+ok 1 - use ZMQ::Constants;
+ok 2 - main->can(...)
+ok 3
+1..3
+ok
+t/001_v3.1.1.t ... 
+ok 1 - use ZMQ::Constants;
+ok 2 - main->can(...)
+ok 3 - 3.1.1 should not have devices
+ok 4 - 3.1.1 should not have devices
+ok 5 - 3.1.1 should not have devices
+ok 6 - 3.1.1 should not have FAIL_UNROUTABLE
+ok 7 - 3.1.1 should not have ZMQ_MAX_VSM_SIZE
+ok 8 - 3.1.1 should not have ZMQ_DELIMITER
+ok 9 - 3.1.1 should not have ZMQ_VSM
+ok 10 - 3.1.1 should not have ZMQ_MSG_MORE
+ok 11 - 3.1.1 should not have ZMQ_MSG_SHARED
+ok 12 - 3.1.1 should not have ZMQ_MSG_MASK
+ok 13 - 3.1.1 should not have ZMQ_HWM
+ok 14 - 3.1.1 should not have ZMQ_SWAP
+ok 15 - 3.1.1 should not have ZMQ_RECOVERY_IVL_MSEC
+ok 16 - 3.1.1 should not have ZMQ_NOBLOCK
+1..16
+ok
+t/002_v3.1.2.t ... 
+ok 1 - use ZMQ::Constants;
+ok 2 - main->can(...)
+ok 3 - sanity
+ok 4 - 3.1.2 should have devices
+ok 5 - 3.1.2 should have devices
+ok 6 - 3.1.2 should have devices
+ok 7 - 3.1.2 should have ZMQ_FAIL_UNROUTABLE
+ok 8 - 3.1.2 should not have ZMQ_MAX_VSM_SIZE
+ok 9 - 3.1.2 should not have ZMQ_DELIMITER
+ok 10 - 3.1.2 should not have ZMQ_VSM
+ok 11 - 3.1.2 should not have ZMQ_MSG_MORE
+ok 12 - 3.1.2 should not have ZMQ_MSG_SHARED
+ok 13 - 3.1.2 should not have ZMQ_MSG_MASK
+ok 14 - 3.1.2 should not have ZMQ_HWM
+ok 15 - 3.1.2 should not have ZMQ_SWAP
+ok 16 - 3.1.2 should not have ZMQ_RECOVERY_IVL_MSEC
+ok 17 - 3.1.2 should not have ZMQ_NOBLOCK
+1..17
+ok
+t/003_v2.1.11.t .. 
+ok 1 - use ZMQ::Constants;
+ok 2 - main->can(...)
+ok 3 - ZMQ_MAXMSGSIZE should not exist in v2.1.11
+ok 4 - ZMQ_SNDHWM should not exist in v2.1.11
+ok 5 - ZMQ_RCVHWM should not exist in v2.1.11
+ok 6 - ZMQ_MULTICAST_HOPS should not exist in v2.1.11
+ok 7 - ZMQ_RCVTIMEO should not exist in v2.1.11
+ok 8 - ZMQ_SNDTIMEO should not exist in v2.1.11
+ok 9 - ZMQ_IPV4ONLY should not exist in v2.1.11
+ok 10 - ZMQ_LAST_ENDPOINT should not exist in v2.1.11
+ok 11 - ZMQ_FAIL_UNROUTABLE should not exist in v2.1.11
+ok 12 - ZMQ_MAX_VSM_SIZE should exist in v2.1.11
+ok 13 - ZMQ_MAX_VSM_SIZE is callable
+ok 14 - ZMQ_DELIMITER should exist in v2.1.11
+ok 15 - ZMQ_DELIMITER is callable
+ok 16 - ZMQ_VSM should exist in v2.1.11
+ok 17 - ZMQ_VSM is callable
+ok 18 - ZMQ_MSG_MORE should exist in v2.1.11
+ok 19 - ZMQ_MSG_MORE is callable
+ok 20 - ZMQ_MSG_SHARED should exist in v2.1.11
+ok 21 - ZMQ_MSG_SHARED is callable
+ok 22 - ZMQ_MSG_MASK should exist in v2.1.11
+ok 23 - ZMQ_MSG_MASK is callable
+ok 24 - ZMQ_HWM should exist in v2.1.11
+ok 25 - ZMQ_HWM is callable
+ok 26 - ZMQ_SWAP should exist in v2.1.11
+ok 27 - ZMQ_SWAP is callable
+ok 28 - ZMQ_RECOVERY_IVL_MSEC should exist in v2.1.11
+ok 29 - ZMQ_RECOVERY_IVL_MSEC is callable
+ok 30 - ZMQ_NOBLOCK should exist in v2.1.11
+ok 31 - ZMQ_NOBLOCK is callable
+1..31
+ok
+t/004_v4.0.4.t ... 
+ok 1 - use ZMQ::Constants;
+ok 2 - main->can(...)
+ok 3 - sanity
+ok 4 - 4.0.4 should have devices
+ok 5 - 4.0.4 should have devices
+ok 6 - 4.0.4 should have devices
+ok 7 - 4.0.4 should have ZMQ_FAIL_UNROUTABLE
+ok 8 - 4.0.4 should not have ZMQ_DELIMITER
+ok 9 - 4.0.4 should not have ZMQ_DOWNSTREAM
+ok 10 - 4.0.4 should not have ZMQ_HWM
+ok 11 - 4.0.4 should not have ZMQ_MAX_VSM_SIZE
+ok 12 - 4.0.4 should not have ZMQ_MCAST_LOOP
+ok 13 - 4.0.4 should not have ZMQ_MSG_MASK
+ok 14 - 4.0.4 should not have ZMQ_MSG_MORE
+ok 15 - 4.0.4 should not have ZMQ_MSG_SHARED
+ok 16 - 4.0.4 should not have ZMQ_RECOVERY_IVL_MSEC
+ok 17 - 4.0.4 should not have ZMQ_SWAP
+ok 18 - 4.0.4 should not have ZMQ_UPSTREAM
+ok 19 - 4.0.4 should not have ZMQ_VSM
+1..19
+ok
+All tests successful.
+Files=5, Tests=86,  1 wallclock secs ( 0.05 usr  0.01 sys +  0.41 cusr  0.06 csys =  0.53 CPU)
+Result: PASS
+make[1]: Leaving directory '/root/lab/tmp4/libzmq-constants-perl'
+   create-stamp debian/debhelper-build-stamp
+   dh_prep
+   dh_auto_install
+	make -j4 install DESTDIR=/root/lab/tmp4/libzmq-constants-perl/debian/libzmq-constants-perl AM_UPDATE_INFO_DIR=no PREFIX=/usr
+make[1]: Entering directory '/root/lab/tmp4/libzmq-constants-perl'
+Manifying 1 pod document
+Installing /root/lab/tmp4/libzmq-constants-perl/debian/libzmq-constants-perl/usr/share/perl5/ZMQ/Constants.pm
+Installing /root/lab/tmp4/libzmq-constants-perl/debian/libzmq-constants-perl/usr/share/perl5/ZMQ/Constants/V3_1_2.pm
+Installing /root/lab/tmp4/libzmq-constants-perl/debian/libzmq-constants-perl/usr/share/perl5/ZMQ/Constants/V4_0_4.pm
+Installing /root/lab/tmp4/libzmq-constants-perl/debian/libzmq-constants-perl/usr/share/perl5/ZMQ/Constants/V3_1_1.pm
+Installing /root/lab/tmp4/libzmq-constants-perl/debian/libzmq-constants-perl/usr/share/perl5/ZMQ/Constants/V2_1_11.pm
+Installing /root/lab/tmp4/libzmq-constants-perl/debian/libzmq-constants-perl/usr/share/man/man3/ZMQ::Constants.3pm
+make[1]: Leaving directory '/root/lab/tmp4/libzmq-constants-perl'
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'libzmq-constants-perl' in '../libzmq-constants-perl_1.04-1_all.deb'.
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../libzmq-constants-perl_1.04-1_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian libzmq-constants-perl_1.04-1_amd64.changes ...
+warning: running with root privileges is not recommended!
+E: libzmq-constants-perl: bogus-mail-host-in-debian-changelog root <root@>
+E: libzmq-constants-perl: helper-templates-in-copyright
+E: libzmq-constants-perl changes: malformed-contact Changed-By root <root@
+W: libzmq-constants-perl: copyright-contains-automatically-extracted-boilerplate
+W: libzmq-constants-perl: description-contains-dh-make-perl-template
+W: libzmq-constants-perl: initial-upload-closes-no-bugs
+W: libzmq-constants-perl source: no-nmu-in-changelog
+W: libzmq-constants-perl source: source-nmu-has-incorrect-version-number 1.04-1
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile dsc libzmq-constants-perl_1.04-1.dsc root <root@>
+gpg: skipped "root <root@>": No secret key
+gpg: /tmp/debsign.XLcJYVwf/libzmq-constants-perl_1.04-1.dsc: clear-sign failed: No secret key
+debsign: gpg error occurred!  Aborting....
